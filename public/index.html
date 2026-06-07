@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvalXpert - Your Calculation Partner</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234FC3F7' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 21V5h14v14H5zM6.25 7.72h1.5v7.5h-1.5zm3.75 0h1.5v7.5h-1.5zm3.75 0h1.5v7.5h-1.5z'/%3E%3Cpath fill='%2326C6DA' d='M9.75 7.72H11.25V15.22H9.75z'/%3E%3C/svg%3E" type="image/svg+xml">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-title">EvalXpert</div>
+        </header>
+
+        <main class="calculator">
+            <div class="display">
+                <input type="text" id="expression-input" class="expression-input" value="" placeholder="0" readonly>
+                <div id="result-display" class="result-display"></div>
+            </div>
+
+            <div class="buttons-grid">
+                <button class="btn btn-clear" data-action="clear">C</button>
+                <button class="btn btn-operator" data-value="(">(</button>
+                <button class="btn btn-operator" data-value=")">)</button>
+                <button class="btn btn-operator" data-value="/" data-action="operator">÷</button>
+
+                <button class="btn btn-number" data-value="7">7</button>
+                <button class="btn btn-number" data-value="8">8</button>
+                <button class="btn btn-number" data-value="9">9</button>
+                <button class="btn btn-operator" data-value="*" data-action="operator">×</button>
+
+                <button class="btn btn-number" data-value="4">4</button>
+                <button class="btn btn-number" data-value="5">5</button>
+                <button class="btn btn-number" data-value="6">6</button>
+                <button class="btn btn-operator" data-value="-" data-action="operator">-</button>
+
+                <button class="btn btn-number" data-value="1">1</button>
+                <button class="btn btn-number" data-value="2">2</button>
+                <button class="btn btn-number" data-value="3">3</button>
+                <button class="btn btn-operator" data-value="+" data-action="operator">+</button>
+
+                <button class="btn btn-number" data-value="0">0</button>
+                <button class="btn btn-decimal" data-value=".">.</button>
+                <button class="btn btn-backspace" data-action="backspace">DEL</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+        </main>
+
+        <aside class="history-sidebar">
+            <h2 class="history-title">History</h2>
+            <ul id="history-list" class="history-list"></ul>
+        </aside>
+    </div>
+
+    <script src="/js/ui.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
